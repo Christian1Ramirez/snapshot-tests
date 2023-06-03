@@ -17,9 +17,18 @@ function App() {
         >
           Learn React
         </a>
+        <h1>This is a change</h1>
       </header>
     </div>
   );
 }
 
 export default App;
+
+
+test ('it renders correctly', () => {
+  const tree = renderer
+    .create(<Toggle />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+})
